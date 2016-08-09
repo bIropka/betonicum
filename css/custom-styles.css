@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'Helvetica Neuecyr Light';
+    src: url("../fonts/HelveticaNeueCyr-Roman.otf") format("opentype"), url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica Neuecyr Thin';
+    src: url("../fonts/HelveticaNeueCyr-Thin.otf") format("opentype"), url('../fonts/HelveticaNeueCyr-Thin.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PlumbC Bold';
+    src: url("../fonts/PlumbBoldC.otf") format("opentype"), url('../fonts/PlumbBoldC.woff') format('woff'), url('../fonts/PlumbBoldC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PlumbC';
+    src: url("../fonts/PlumbMediumC.otf") format("opentype"), url('../fonts/PlumbMediumC.woff') format('woff'), url('../fonts/PlumbMediumC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PlumbC';
+    src: url("../fonts/PlumbMediumC.otf") format("opentype"), url('../fonts/PlumbMediumC.woff') format('woff'), url('../fonts/PlumbMediumC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AGroticLt';
+    src: url('../fonts/AGroticLt.woff') format('woff'), url('../fonts/AGroticLt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #000000;
+    font-family: 'PlumbC', sans-serif;
+}
+ul li {
+    display: inline-block;
+    list-style: none;
+    vertical-align: middle;
+}
+
+a, button, input[type="submit"], input[type="cancel"], input[type="reset"] {
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-appearance: none;
+}
+a {
+    text-decoration: none;
+}
+a:active, a:focus {
+    outline: none;
+    border: none;
+}
+
+button, button:hover, button:active {
+    outline: none;
+    border: none;
+}
+button::-moz-focus-inner {
+    outline: none;
+    border: none;
+}
+input, input:hover, input:active, input:focus {
+    outline: none;
+    border: none;
+}
+textarea, textarea:hover, textarea:active, textarea:focus {
+    outline: none;
+    border: none;
+}
+.clearfix:after {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+}
+section {
+    display: block;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+h1 {
+
+}
+h2 {
+
+}
+h3 {
+
+}
+.logo {
+
+}
+.logo img {
+    display: block;
+    width: 28%;
+    height: auto;
+    float: left;
+}
+
+/************************
+****** header ***********
+************************/
+header[role="banner"] {
+    width: 100%;
+}
+.slider-header-wrap {
+    position: relative;
+    width: 100%;
+    border: 1px solid red;
+}
+.slider-header-wrap .logo {
+    width: 24%;
+    padding: 40px 20px 50px;
+    background-color: #701918;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slider-header-wrap .logo p {
+    font-family: 'Helvetica Neuecyr Light', sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    text-decoration: underline;
+}
+.slider-header-wrap .logo p span {
+    display: block;
+    font-family: 'Helvetica Neuecyr Thin', sans-serif;
+    font-size: 16px;
+    color: #ebeaea;
+}
