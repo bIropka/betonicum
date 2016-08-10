@@ -88,6 +88,13 @@ $(document).ready(function () {
         $('.coating-chooser').removeClass('active');
     });
 
+    $('.show-map').click(function() {
+        $('.on-map').addClass('active');
+    });
+    $('.to-hide-map').click(function() {
+        $('.on-map').removeClass('active');
+    });
+
     /****************
      **** sliders ***
      ****************/

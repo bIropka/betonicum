@@ -29,6 +29,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'SimHei';
+    src: url('../fonts/simhei.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     padding: 0;
@@ -67,6 +73,10 @@ a:active, a:focus {
     border: none;
 }
 
+textarea {
+    resize: none;
+}
+
 button, button:hover, button:active {
     outline: none;
     border: none;
@@ -95,8 +105,12 @@ textarea, textarea:hover, textarea:active, textarea:focus {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 25px;
+    padding: 75px 25px;
 }
+.form-field:focus::-webkit-input-placeholder {color: transparent;}
+.form-field:focus::-moz-placeholder {color: transparent;}
+.form-field:focus:-moz-placeholder {color: transparent;}
+.form-field:focus:-ms-input-placeholder {color: transparent;}
 h1 {
 
 }
@@ -104,7 +118,31 @@ h2 {
     font-weight: 100;
 }
 h3 {
-
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'SimHei', sans-serif;
+    font-size: 14px;
+    color: #313131;
+    font-weight: 100;
+    white-space: nowrap;
+}
+h3.line-before:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    height: 1px;
+    background-color: #313131;
+    margin-right: 50px;
+}
+h3.line-after:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    height: 1px;
+    background-color: #313131;
+    margin-left: 50px;
 }
 .logo {
     display: block;
@@ -151,6 +189,9 @@ header[role="banner"] {
     display: block;
     width: 100%;
     padding-top: 25px;
+}
+header[role="banner"] .wrapper {
+    padding: 0 25px;
 }
 
 /* header slider */
@@ -711,6 +752,141 @@ main {
     min-height: 100vh;
 }
 
+/************************
+******* contacts ********
+************************/
+
+.contacts {
+    background-color: #f7f6f3;
+}
+.contacts .wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.contacts .contacts-block {
+    width: 100%;
+    max-width: 500px;
+    margin: 60px 0 60px 30%;
+}
+.contacts .contact {
+    display: inline-block;
+    margin: 0 30px 40px 0;
+}
+.contacts .contact span {
+    font-family: 'Plumb Bold', sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #313131;
+}
+.contacts .contact span:last-child {
+    font-family: 'Plumb Regular', sans-serif;
+    font-size: 13px;
+    margin-left: 10px;
+    text-transform: none;
+}
+.contacts .contact a {
+    font-size: 13px;
+    color: #313131;
+    margin-left: 10px;
+}
+.show-map {
+    display: block;
+    width: 170px;
+    font-size: 13px;
+    cursor: pointer;
+    padding-left: 15px;
+    position: relative;
+}
+.show-map:before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 11px;
+    background: transparent url('../images/icon-geo.png') no-repeat;
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+.show-map:after {
+    content: '\2192';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.form-write-to-us {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    margin: 60px auto 0;
+}
+.form-write-to-us .form-field-wrap {
+    display: inline-block;
+    width: 30%;
+    margin-right: 2.5%;
+    margin-bottom: 30px;
+}
+.form-write-to-us .form-textarea-wrap {
+    width: 62.5%;
+}
+.form-write-to-us .form-field {
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    border-bottom: 1px solid #c1c1c1;
+}
+.form-write-to-us .form-textarea-wrap textarea {
+    height: 70px;
+}
+.form-write-to-us .form-field:focus {
+    border-bottom: 1px solid #000000;
+}
+.form-write-to-us .form-field::-webkit-input-placeholder {font-size: 13px;}
+.form-write-to-us .form-field::-moz-placeholder {font-size: 13px;}
+.form-write-to-us .form-field:-moz-placeholder {font-size: 13px;}
+.form-write-to-us .form-field:-ms-input-placeholder {font-size: 13px;}
+
+.form-write-to-us .form-submit {
+    margin-left: 20%;
+    background-color: transparent;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000000;
+    letter-spacing: 1px;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-family: 'Plumb Bold', sans-serif;
+}
+
+.on-map {
+    width: 100%;
+    height: 100%;
+    max-height: 550px;
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+.on-map .to-hide-map {
+    display: block;
+    width: 38px;
+    height: 38px;
+    background: #ffffff url('../images/sprite-arrows.png') no-repeat -7px center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border: 3px solid #ffffff;
+    cursor: pointer;
+}
+.on-map.active {
+    right: 0!important;
+}
 
 /************************
 ******** footer *********
@@ -718,6 +894,9 @@ main {
 
 footer[role="contentinfo"] {
     background-color: #262626;
+}
+footer[role="contentinfo"] .wrapper {
+    padding: 0 25px;
 }
 footer[role="contentinfo"] .copyrights {
     display: inline-block;
