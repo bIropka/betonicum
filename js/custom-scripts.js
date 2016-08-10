@@ -68,6 +68,26 @@ $(document).ready(function () {
 
     });
 
+    $('.to-first-step').click(function() {
+        $(this).parents('.coating-chooser').removeClass('second-step');
+        $(this).parents('.coating-chooser').addClass('first-step');
+    });
+    $('.to-second-step').click(function() {
+        $(this).parents('.coating-chooser').removeClass('first-step third-step');
+        $(this).parents('.coating-chooser').addClass('second-step');
+    });
+    $('.to-third-step').click(function() {
+        $(this).parents('.coating-chooser').removeClass('second-step');
+        $(this).parents('.coating-chooser').addClass('third-step');
+    });
+
+    $('.show-coating-chooser').click(function() {
+        $('.coating-chooser').addClass('active');
+    });
+    $('.coating-chooser .close-marker').click(function() {
+        $('.coating-chooser').removeClass('active');
+    });
+
     /****************
      **** sliders ***
      ****************/

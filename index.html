@@ -13,7 +13,7 @@
 
     <div class="wrapper">
 
-        <div class="slider-header-wrap">
+        <div class="header-slider">
 
             <a class="logo" href="#">
 
@@ -63,7 +63,7 @@
 
             <div class="show-coating-chooser">Подбор сецифики для покрытия</div>
 
-            <div class="coating-chooser third-step">
+            <div class="coating-chooser first-step">
 
                 <div class="close-marker"></div>
 
@@ -141,8 +141,8 @@
 
                     <fieldset class="second-step-fields">
 
-                        <input type="checkbox" id="coating-checkbox-weight-1"/>
-                        <label for="coating-checkbox-weight-1" class="checkbox-weight">
+                        <input type="radio" id="coating-radio-weight-1" name="radio-weight" checked/>
+                        <label for="coating-radio-weight-1" class="radio-weight">
 
                             <span class="title">Легкий</span>
 
@@ -152,8 +152,8 @@
 
                         </label>
 
-                        <input type="checkbox" id="coating-checkbox-weight-2"/>
-                        <label for="coating-checkbox-weight-2" class="checkbox-weight">
+                        <input type="radio" id="coating-radio-weight-2" name="radio-weight"/>
+                        <label for="coating-radio-weight-2" class="radio-weight">
 
                             <span class="title">Средний</span>
 
@@ -163,8 +163,8 @@
 
                         </label>
 
-                        <input type="checkbox" id="coating-checkbox-weight-3"/>
-                        <label for="coating-checkbox-weight-3" class="checkbox-weight">
+                        <input type="radio" id="coating-radio-weight-3" name="radio-weight"/>
+                        <label for="coating-radio-weight-3" class="radio-weight">
 
                             <span class="title">Тяжелый</span>
 
@@ -174,8 +174,8 @@
 
                         </label>
 
-                        <input type="checkbox" id="coating-checkbox-weight-4"/>
-                        <label for="coating-checkbox-weight-4" class="checkbox-weight">
+                        <input type="radio" id="coating-radio-weight-4" name="radio-weight"/>
+                        <label for="coating-radio-weight-4" class="radio-weight">
 
                             <span class="title">Автоматизированный</span>
 
@@ -234,6 +234,8 @@
 
                         <input type="checkbox" id="coating-checkbox-conditions-14"/>
                         <label for="coating-checkbox-conditions-14" class="checkbox-conditions">Основание и покрытие Адгезия</label>
+
+                        <button class="to-second-step">Назад</button>
 
                         <button type="submit">подобрать</button>
 

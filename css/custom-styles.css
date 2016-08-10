@@ -154,12 +154,12 @@ header[role="banner"] {
 }
 
 /* header slider */
-.slider-header-wrap {
+.header-slider {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
-.slider-header-wrap .logo {
+.header-slider .logo {
     width: 25%;
     padding: 3.125% 1.5625% 3.90625%;
     background-color: #701918;
@@ -168,18 +168,18 @@ header[role="banner"] {
     left: 0;
     z-index: 2;
 }
-.slider-header-wrap .logo img {
+.header-slider .logo img {
     width: 28%;
 }
-.slider-header-wrap .logo p {
+.header-slider .logo p {
     margin-left: 6%;
 }
-.slider-header-wrap .logo p span {
+.header-slider .logo p span {
     font-size: 27px;
     color: #ffffff;
     letter-spacing: 4px;
 }
-.slider-header-wrap .logo p span:last-child {
+.header-slider .logo p span:last-child {
     font-size: 11px;
 }
 .show-coating-chooser {
@@ -452,7 +452,7 @@ nav>ul>li ul li a:hover {
     height: 100%;
     width: 100%;
     max-width: 1080px;
-    right: 0;
+    right: -100%;
     top: 0;
     z-index: 100;
     background-color: #1e1e1e;
@@ -461,6 +461,14 @@ nav>ul>li ul li a:hover {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+.coating-chooser.active {
+    right: 0;
 }
 .close-marker {
     display: block;
@@ -571,6 +579,7 @@ nav>ul>li ul li a:hover {
     border: 1px solid rgba(255, 255, 255, 0.6);
     color: rgba(255, 255, 255, 0.6);
     position: relative;
+    margin-top: 65px;
 }
 .form-coating button:hover {
     border: 1px solid rgba(255, 255, 255, 1);
@@ -583,7 +592,7 @@ nav>ul>li ul li a:hover {
     top: 11px;
     right: 13px;
 }
-.form-coating input[type="checkbox"] {
+.form-coating input[type="checkbox"], .form-coating input[type="radio"] {
     display: none;
 }
 .first-step .first-step-fields {
@@ -604,39 +613,34 @@ nav>ul>li ul li a:hover {
     margin: 0 3px 5px 0;
     cursor: pointer;
 }
-.first-step-fields .checkbox-scope:hover {
-    color: #ffffff;
-}
 .first-step-fields input[type="checkbox"]:checked + .checkbox-scope {
     background-color: #701919;
     color: #ffffff;
 }
-.first-step-fields button {
-    margin-top: 65px;
-}
-.second-step-fields .checkbox-weight {
+.second-step-fields .radio-weight {
     display: block;
     width: 100%;
     border-bottom: 1px solid #363636;
     position: relative;
     padding-bottom: 10px;
     margin-bottom: 3px;
+    cursor: pointer;
 }
-.second-step-fields .checkbox-weight span {
+.second-step-fields .radio-weight span {
     display: block;
     width: 100%;
     font-size: 13px;
     color: #6c6c6c;
     padding-left: 15px;
 }
-.second-step-fields .checkbox-weight .title {
+.second-step-fields .radio-weight .title {
      height: 35px;
      background-color: #212121;
      line-height: 35px;
      text-transform: uppercase;
      margin-bottom: 15px;
 }
-.second-step-fields .checkbox-weight:after {
+.second-step-fields .radio-weight:after {
     content: '';
     display: block;
     width: 35px;
@@ -646,29 +650,55 @@ nav>ul>li ul li a:hover {
     position: absolute;
     top: 0;
     right: 0;
-    cursor: pointer;
 }
-.second-step-fields input[type="checkbox"]:checked + .checkbox-weight span {
+.first-step-fields .checkbox-scope:hover,
+.second-step-fields .radio-weight:hover span,
+.third-step-fields .checkbox-conditions:hover {
     color: #ffffff;
 }
-.second-step-fields input[type="checkbox"]:checked + .checkbox-weight:after {
+.second-step-fields input[type="radio"]:checked + .radio-weight span,
+.third-step-fields input[type="checkbox"]:checked + .checkbox-conditions {
+    color: #ffffff;
+}
+.second-step-fields input[type="radio"]:checked + .radio-weight:after,
+.third-step-fields input[type="checkbox"]:checked + .checkbox-conditions:after {
     background: #701919 url('../images/sprite-ok.png') no-repeat right center;
     background-size: cover;
 }
-.second-step-fields button {
-    margin-top: 65px;
+.third-step-fields .checkbox-conditions {
+    display: inline-block;
+    height: 30px;
+    color: #6c6c6c;
+    padding: 0 70px 0 15px;
+    border: 1px solid #6c6c6c;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 30px;
+    margin: 0 3px 5px 0;
+    position: relative;
 }
-.second-step-fields .to-first-step {
+.third-step-fields .checkbox-conditions:after {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: #2b2b2b url('../images/sprite-ok.png') no-repeat left center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.second-step-fields .to-first-step, .third-step-fields .to-second-step {
     float: left;
     padding: 10px 20px 10px 30px;
 }
-.second-step-fields .to-first-step:after {
+.second-step-fields .to-first-step:after, .third-step .to-second-step:after {
     content: '\25C4';
     top: 10px;
     right: auto;
     left: 13px;
 }
-.second-step-fields .to-third-step {
+.second-step-fields .to-third-step, .third-step-fields button[type='submit'] {
     float: right;
 }
 
@@ -712,14 +742,14 @@ footer[role="contentinfo"] .text {
     .wrapper {
         padding: 0 15px;
     }
-    .slider-header-wrap .logo {
+    .header-slider .logo {
         width: 26%;
     }
-    .slider-header-wrap .logo p span {
+    .header-slider .logo p span {
         font-size: 24px;
         letter-spacing: 3px;
     }
-    .slider-header-wrap .logo p span:last-child {
+    .header-slider .logo p span:last-child {
         font-size: 10px;
     }
     .slider-header .slide .product-info h2 {
