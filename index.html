@@ -11,7 +11,7 @@
 
 <header role="banner">
 
-    <section>
+    <div class="wrapper">
 
         <div class="slider-header-wrap">
 
@@ -61,13 +61,189 @@
 
             </div>
 
-            <div class="show-side-panel">Подбор сецифики для покрытия</div>
+            <div class="show-coating-chooser">Подбор сецифики для покрытия</div>
+
+            <div class="coating-chooser first-step">
+
+                <div class="close-marker"></div>
+
+                <div class="chooser-controls">
+
+                    <p>Выберие специфику для покрытия:</p>
+
+                    <ul class="chooser-controls">
+
+                        <li>Выбор промышленности <span></span></li>
+
+                        <li>Расчет тяжести <span></span></li>
+
+                        <li>Выбор условий <span></span></li>
+
+                    </ul>
+
+                </div>
+
+                <form action="#" id="form-coating">
+
+                    <fieldset class="first-step-fields">
+
+                        <input type="checkbox" id="coating-checkbox-scope-1"/>
+                        <label for="coating-checkbox-scope-1" class="checkbox-scope">Мясокомбинаты</label>
+
+                        <input type="checkbox" id="coating-checkbox-scope-2"/>
+                        <label for="coating-checkbox-scope-2" class="checkbox-scope">Инкубаторы</label>
+
+                        <input type="checkbox" id="coating-checkbox-scope-3"/>
+                        <label for="coating-checkbox-scope-3" class="checkbox-scope">Птицефабрики</label>
+
+                        <input type="checkbox" id="coating-checkbox-scope-4"/>
+                        <label for="coating-checkbox-scope-4" class="checkbox-scope">Фармацевтика</label>
+
+                        <input type="checkbox" id="coating-checkbox-scope-5"/>
+                        <label for="coating-checkbox-scope-5" class="checkbox-scope">Кондитерские предприятия</label>
+
+                        <input type="checkbox" id="coating-checkbox-scope-6"/>
+                        <label for="coating-checkbox-scope-6" class="checkbox-scope">Химические заводы</label>
+
+                        <input type="checkbox" id="coating-checkbox-scope-7"/>
+                        <label for="coating-checkbox-scope-7" class="checkbox-scope">Пивоваренные заводы</label>
+
+                        <input type="checkbox" id="coating-checkbox-scope-8"/>
+                        <label for="coating-checkbox-scope-8" class="checkbox-scope">Нефтепереработка</label>
+
+                        <input type="checkbox" id="coating-checkbox-scope-9"/>
+                        <label for="coating-checkbox-scope-9" class="checkbox-scope">Производство соков и напитков</label>
+
+                        <input type="checkbox" id="coating-checkbox-scope-10"/>
+                        <label for="coating-checkbox-scope-10" class="checkbox-scope">Молокозаводы</label>
+
+                        <input type="checkbox" id="coating-checkbox-scope-11"/>
+                        <label for="coating-checkbox-scope-11" class="checkbox-scope">Сыродельные комбинаты</label>
+
+                        <input type="checkbox" id="coating-checkbox-scope-12"/>
+                        <label for="coating-checkbox-scope-12" class="checkbox-scope">Автосборочные предприятия</label>
+
+                        <input type="checkbox" id="coating-checkbox-scope-13"/>
+                        <label for="coating-checkbox-scope-13" class="checkbox-scope">Целлюлозно-бумажные комбинаты</label>
+
+                        <input type="checkbox" id="coating-checkbox-scope-14"/>
+                        <label for="coating-checkbox-scope-14" class="checkbox-scope">Лаборатории</label>
+
+                        <input type="checkbox" id="coating-checkbox-scope-15"/>
+                        <label for="coating-checkbox-scope-15" class="checkbox-scope">Парковки</label>
+
+                        <input type="checkbox" id="coating-checkbox-scope-16"/>
+                        <label for="coating-checkbox-scope-16" class="checkbox-scope">Аэрокосмические предприятия</label>
+
+                        <button class="to-second-step">Далее ...</button>
+
+                    </fieldset>
+
+                    <fieldset class="second-step-fields">
+
+                        <input type="checkbox" id="coating-checkbox-weight-1"/>
+                        <label for="coating-checkbox-weight-1" class="checkbox-weight">
+
+                            <span class="title">Легкий</span>
+
+                            <span class="text">
+                                Пешеходные, легкие транспортные средства, и складские помещения.
+                            </span>
+
+                        </label>
+
+                        <input type="checkbox" id="coating-checkbox-weight-2"/>
+                        <label for="coating-checkbox-weight-2" class="checkbox-weight">
+
+                            <span class="title">Средний</span>
+
+                            <span class="text">
+                                Регулярные ручные гидравлические и управляемые погрузчики, ручные вёдер & стеллажи продукции, а также химические режимы чистки на основе.
+                            </span>
+
+                        </label>
+
+                        <input type="checkbox" id="coating-checkbox-weight-3"/>
+                        <label for="coating-checkbox-weight-3" class="checkbox-weight">
+
+                            <span class="title">Тяжелый</span>
+
+                            <span class="text">
+                                Увеличение плотности движения приводом, агрессивные колеса транспортного средства (сталь / плотный, твердый пластик), тепловому удару, и агрессивные режимы уборки (химическая / высокого давления).
+                            </span>
+
+                        </label>
+
+                        <input type="checkbox" id="coating-checkbox-weight-4"/>
+                        <label for="coating-checkbox-weight-4" class="checkbox-weight">
+
+                            <span class="title">Автоматизированный</span>
+
+                            <span class="text">
+                                Последовательное и высокая плотность трафика автоматизирован требует поверхностные допуски на верхних этажах.
+                            </span>
+
+                        </label>
+
+                        <button class="to-first-step">Назад</button>
+
+                        <button class="to-third-step">Далее ...</button>
+
+                    </fieldset>
+
+                    <fieldset class="third-step-fields">
+
+                        <input type="checkbox" id="coating-checkbox-conditions-1"/>
+                        <label for="coating-checkbox-conditions-1" class="checkbox-conditions">Износостойкость</label>
+
+                        <input type="checkbox" id="coating-checkbox-conditions-2"/>
+                        <label for="coating-checkbox-conditions-2" class="checkbox-conditions">Антипробуксовочная</label>
+
+                        <input type="checkbox" id="coating-checkbox-conditions-3"/>
+                        <label for="coating-checkbox-conditions-3" class="checkbox-conditions">Anti-Static</label>
+
+                        <input type="checkbox" id="coating-checkbox-conditions-4"/>
+                        <label for="coating-checkbox-conditions-4" class="checkbox-conditions">Биоцид Добавка</label>
+
+                        <input type="checkbox" id="coating-checkbox-conditions-5"/>
+                        <label for="coating-checkbox-conditions-5" class="checkbox-conditions">Химически стойкая</label>
+
+                        <input type="checkbox" id="coating-checkbox-conditions-6"/>
+                        <label for="coating-checkbox-conditions-6" class="checkbox-conditions">Очистка</label>
+
+                        <input type="checkbox" id="coating-checkbox-conditions-7"/>
+                        <label for="coating-checkbox-conditions-7" class="checkbox-conditions">Декоративный</label>
+
+                        <input type="checkbox" id="coating-checkbox-conditions-8"/>
+                        <label for="coating-checkbox-conditions-8" class="checkbox-conditions">Быстротвердеющий</label>
+
+                        <input type="checkbox" id="coating-checkbox-conditions-9"/>
+                        <label for="coating-checkbox-conditions-9" class="checkbox-conditions">Гигиенический</label>
+
+                        <input type="checkbox" id="coating-checkbox-conditions-10"/>
+                        <label for="coating-checkbox-conditions-10" class="checkbox-conditions">Ударопрочный</label>
+
+                        <input type="checkbox" id="coating-checkbox-conditions-11"/>
+                        <label for="coating-checkbox-conditions-11" class="checkbox-conditions">Без растворителей</label>
+
+                        <input type="checkbox" id="coating-checkbox-conditions-12"/>
+                        <label for="coating-checkbox-conditions-12" class="checkbox-conditions">Упорная</label>
+
+                        <input type="checkbox" id="coating-checkbox-conditions-13"/>
+                        <label for="coating-checkbox-conditions-13" class="checkbox-conditions">Тепловой удар</label>
+
+                        <input type="checkbox" id="coating-checkbox-conditions-14"/>
+                        <label for="coating-checkbox-conditions-14" class="checkbox-conditions">Основание и покрытие Адгезия</label>
+
+                        <button type="submit">подобрать</button>
+
+                    </fieldset>
+
+                </form>
+
+            </div>
 
         </div>
-
-    </section>
-
-    <section>
 
         <div class="header-nav clearfix">
 
@@ -93,11 +269,29 @@
 
                 <div class="burger"></div>
 
+                <!-- ul before a only -->
                 <ul>
                     <li><a href="#">О нас</a></li>
-                    <li><a href="#">Услуги</a></li>
+                    <li>
+                        <ul>
+                            <li><a href="#">text 1fgdbsbsbs</a></li>
+                            <li><a href="#">text 2rge</a></li>
+                            <li><a href="#">text 3wefewfwefwfwefwefwf</a></li>
+                            <li><a href="#">text 4w</a></li>
+                            <li><a href="#">text 5</a></li>
+                            <li><a href="#">text 6f</a></li>
+                        </ul>
+                        <a href="#">Услуги</a>
+                    </li>
                     <li><a href="#">Resalux</a></li>
-                    <li><a href="#">Проекты</a></li>
+                    <li>
+                        <ul>
+                            <li><a href="#">text 1</a></li>
+                            <li><a href="#">text 2</a></li>
+                            <li><a href="#">text 3</a></li>
+                        </ul>
+                        <a href="#">Проекты</a>
+                    </li>
                     <li><a href="#">Видеогалерея</a></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>
@@ -106,9 +300,31 @@
 
         </div>
 
-    </section>
+    </div>
 
 </header>
+
+<main>
+
+</main>
+
+<footer role="contentinfo">
+
+    <div class="wrapper clearfix">
+
+        <div class="copyrights">
+            © 2016 BETONICUM
+        </div>
+
+        <div class="text">
+            Все права защищены! Запрещается полное или частичное копирование представленных на сайтах фотографий, рисунков, авторских статей и программ, текстов к авторским работам.
+        </div>
+
+    </div>
+
+
+
+</footer>
 
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/slick.min.js"></script>
