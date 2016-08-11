@@ -46,7 +46,6 @@
     font-family: 'Plumb Regular', sans-serif;
 }
 body {
-    height: 100%;
     background-color: #ffffff;
 }
 
@@ -790,19 +789,10 @@ nav>ul>li ul li a:hover {
 }
 
 /************************
-********* main **********
-************************/
-
-main {
-    display: block;
-    min-height: 100vh;
-}
-
-/************************
 ****** our history ******
 ************************/
 
-.our-history h3 {
+.our-history h3, .our-products h3, .video h3 {
     position: absolute;
     top: 50px;
     right: 15%;
@@ -946,6 +936,122 @@ main {
     width: 75%;
     padding: 50px 0 0 20px;
 }
+
+/************************
+****** our products *****
+************************/
+
+.our-products ul {
+    margin-top: 5%;
+}
+.our-products ul li {
+    display: block;
+    width: 100%;
+    margin-bottom: 7%;
+}
+.our-products ul li:last-child {
+    margin-bottom: 0;
+}
+.our-products-img {
+    width: 40%;
+    float: left;
+    margin-left: 5%;
+    text-align: right;
+}
+.our-products-info {
+    width: 40%;
+    float: right;
+    margin-right: 5%;
+}
+.our-products-img a {
+    margin-top: 20px;
+}
+.our-products ul li:nth-child(2n) .our-products-img {
+    float: right;
+    margin-left: 0;
+    text-align: left;
+}
+.our-products ul li:nth-child(2n) .our-products-info {
+    float: left;
+    margin-right: 0;
+    margin-left: 10%;
+}
+.our-products-info h4 {
+    font-size: 20px;
+    line-height: 1;
+}
+.our-products-info h4 span {
+    display: inline-block;
+    color: #e4e4e4;
+    margin-right: 15px;
+    line-height: 1;
+}
+.our-products-info h4 span:nth-child(1) {
+    font-size: 60px;
+    margin-right: 5px;
+}
+.our-products-info>p {
+    font-size: 13px;
+    line-height: 2;
+    margin-top: 20px;
+}
+.our-products-info img {
+    max-width: 100%;
+    margin-top: 20px;
+}
+.our-products ul li:nth-child(2) .our-products-info h4 {
+    font-size: 16px;
+}
+
+.slider-products {
+    margin: 30px 0;
+}
+.slide-products {
+    padding: 0 10px;
+    border-left: 1px solid #e5e5e5;
+}
+.slide-products .title {
+    font-family: 'Plumb Bold', sans-serif;
+    font-size: 20px;
+}
+.slide-products .text {
+    font-size: 12px;
+    line-height: 2;
+    margin-top: 20px;
+}
+.slider-control-left-products {
+    margin: 0 15px;
+}
+
+/************************
+********* video *********
+************************/
+
+.video h2 {
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    font-size: 30px;
+    text-align: center;
+    margin: 5% auto 2.5%;
+}
+.video .video-wrap {
+    display: block;
+    width: 80%;
+    height: 430px;
+    max-width: 870px;
+    margin: 0 auto;
+}
+.video p {
+    display: block;
+    width: 80%;
+    max-width: 870px;
+    margin: 2.5% auto 0;
+    text-align: center;
+    font-size: 13px;
+    color: #777777;
+}
+
 
 /************************
 ********* news **********

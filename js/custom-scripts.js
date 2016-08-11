@@ -127,4 +127,11 @@ $(document).ready(function () {
         slidesToScroll: 1
     });
 
+    $('.slider-products').slick({
+        prevArrow: '.slider-control-left-products',
+        nextArrow: '.slider-control-right-products',
+        slidesToShow: 4,
+        slidesToScroll: 1
+    });
+
 });
