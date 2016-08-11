@@ -4,9 +4,12 @@ $(document).ready(function () {
      ***** init *****
      ****************/
 
+    var myBurger = $('.burger');
+    var menuItem = $('nav>ul>li');
+
     if ($(window).width() > '1180'){
         $('nav>ul').css('display', 'block');
-        $('.burger').removeClass('active');
+        myBurger.removeClass('active');
     } else {
         $('nav>ul').css('display', 'none');
     }
@@ -14,7 +17,7 @@ $(document).ready(function () {
     $(window).resize(function(){
         if ($(window).width() > '1180'){
             $('nav>ul').css('display', 'block');
-            $('.burger').removeClass('active');
+            myBurger.removeClass('active');
         } else {
             $('nav>ul').css('display', 'none');
         }
@@ -24,7 +27,7 @@ $(document).ready(function () {
 
         $target = $(event.target);
 
-        if (!$target.closest($('nav>ul>li')).length){
+        if (!$target.closest(menuItem).length){
             $('nav>ul>li>a').removeClass('active');
             $('nav>ul>li>ul').fadeOut();
         }
@@ -35,22 +38,16 @@ $(document).ready(function () {
      **** others *****
      ****************/
 
-    $('.burger').click(function() {
+    myBurger.click(function() {
 
         $(this).toggleClass('active');
         $('nav>ul').slideToggle();
 
     });
 
-    $('nav>ul>li').hover(function() {
+    menuItem.click(function() {
 
-        if($(window).width() > 1180) {
-            $(this).children('a').toggleClass('active');
-            $(this).children('ul').stop().fadeToggle(200);
-        }
-
-    });
-    $('nav>ul>li').click(function() {
+        alert('hi');
 
         if($(window).width() < 1181) {
 
@@ -67,6 +64,17 @@ $(document).ready(function () {
         }
 
     });
+
+    menuItem.hover(function() {
+
+        if($(window).width() > 1180) {
+            $(this).children('a').toggleClass('active');
+            $(this).children('ul').stop().fadeToggle(200);
+        }
+
+    });
+
+
 
     $('.to-first-step').click(function() {
         $(this).parents('.coating-chooser').removeClass('second-step');
@@ -131,7 +139,15 @@ $(document).ready(function () {
         prevArrow: '.slider-control-left-products',
         nextArrow: '.slider-control-right-products',
         slidesToShow: 4,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1181,
+                settings: {
+                    slidesToShow: 3
+                }
+            }
+        ]
     });
 
 });

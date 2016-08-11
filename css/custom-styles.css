@@ -956,6 +956,9 @@ nav>ul>li ul li a:hover {
     margin-left: 5%;
     text-align: right;
 }
+.our-products-img img {
+    width: 100%;
+}
 .our-products-info {
     width: 40%;
     float: right;
@@ -976,7 +979,6 @@ nav>ul>li ul li a:hover {
 }
 .our-products-info h4 {
     font-size: 20px;
-    line-height: 1;
 }
 .our-products-info h4 span {
     display: inline-block;
@@ -1209,6 +1211,102 @@ h1:before {
 }
 
 /************************
+******* projects ********
+************************/
+
+.projects {
+    text-align: center;
+}
+.projects h3 {
+    float: left;
+    margin-left: 20%;
+}
+.projects .show-more {
+    float: right;
+    margin-right: 10%;
+}
+.projects ul {
+    display: block;
+    width: 100%;
+    clear: both;
+    margin: 7% 0;
+}
+.projects ul li {
+    width: 235px;
+    margin: 0 10px;
+}
+.projects ul li a {
+    display: block;
+    border: 1px solid #000000;
+    font-family: 'Plumb Bold', sans-serif;
+    font-size: 13px;
+    padding: 10px 0;
+}
+.projects ul li:hover a {
+    border: 1px solid #701919;
+    color: #701919;
+}
+.projects .title-block {
+    display: inline-block;
+    vertical-align: top;
+    width: 15%;
+    text-align: left;
+}
+.projects .title-block>p {
+    color: #616161;
+    font-size: 12px;
+}
+.projects .title-block>p:before {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 1px;
+    background-color: #000000;
+    margin-bottom: 20px;
+}
+.projects .title-block .show-more {
+    float: none;
+    font-size: 10px;
+}
+.projects .title-block .show-more:before {
+    top: 0;
+}
+.projects .logo {
+    background-color: #701919;
+    padding: 18px 12px;
+    margin: 40px 0 30px;
+}
+.projects-info {
+    display: inline-block;
+    vertical-align: middle;
+    width: 35%;
+    text-align: left;
+    margin-left: 5%;
+}
+.projects-info p {
+    font-family: 'Plumb Bold', sans-serif;
+    font-size: 13px;
+    margin: 20px 0 0 0;
+}
+.projects .projects-info ul {
+    margin: 0;
+    padding: 0;
+}
+.projects .projects-info ul li {
+    font-size: 13px;
+    color: #808080;
+    width: 100%;
+    padding: 0 0 0 15px;
+    margin: 20px 0 0 0;
+    position: relative;
+}
+.projects .projects-info ul li:before {
+    content: '-';
+    position: absolute;
+    left: 0;
+}
+
+/************************
 ********* news **********
 ************************/
 
@@ -1261,19 +1359,19 @@ h1:before {
     padding: 18px 12px;
     margin-top: 20px;
 }
-.news .logo img {
+.news .logo img, .projects .logo img {
     width: 45px;
 }
-.news .logo p span {
+.news .logo p span, .projects .logo p span {
     color: #ffffff;
 }
-.news .logo p span {
+.news .logo p span, .projects .logo p span {
     letter-spacing: 2px;
 }
-.news .logo p span:first-child {
+.news .logo p span:first-child, .projects .logo p span:first-child {
     font-size: 15px;
 }
-.news .logo p span:last-child {
+.news .logo p span:last-child, .projects .logo p span:last-child {
     font-size: 6px;
 }
 
@@ -1566,6 +1664,14 @@ footer[role="contentinfo"] .text {
     }
     .form-coating button {
         margin-top: 30px;
+    }
+    .our-products-img, .our-products-info, .our-products ul li:nth-child(2n) .our-products-info {
+        margin: 0;
+    }
+    .our-products ul li {
+        display: block;
+        width: 90%;
+        margin: 0 auto 7%;
     }
 
 }
