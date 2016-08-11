@@ -441,15 +441,16 @@ nav>ul>li {
     margin-right: 20px;
     position: relative;
 }
-nav>ul>li>a {
+nav>ul>li>a, nav>ul>li p  {
     font-family: 'Plumb Bold', sans-serif;
     font-size: 11px;
     line-height: 60px;
     padding-right: 15px;
     position: relative;
     text-transform: uppercase;
+    cursor: pointer;
 }
-nav>ul>li ul + a:before {
+nav>ul>li p:before {
     content: '';
     display: block;
     width: 7px;
@@ -461,10 +462,10 @@ nav>ul>li ul + a:before {
     top: 0;
     bottom: 0;
 }
-nav>ul>li ul + .active:before {
+nav>ul>li.active p:before {
     background: transparent url('../images/sprite-arrows-menu.png') -21px center;
 }
-nav>ul>li>a:after {
+nav>ul>li:after {
     content: '';
     display: block;
     width: 0;
@@ -472,14 +473,14 @@ nav>ul>li>a:after {
     background-color: #000000;
     position: absolute;
     left: 0;
-    bottom: -10px;
+    bottom: 10px;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
 }
-nav>ul>li>.active:after {
+nav>ul>li.active:after {
     width: 100%;
 }
 nav>ul>li ul {
@@ -1710,6 +1711,7 @@ footer[role="contentinfo"] .text {
         top: 60px;
         width: 100%;
         background-color: #000000;
+        z-index: 1;
     }
     .burger {
         display: block;
@@ -1720,20 +1722,26 @@ footer[role="contentinfo"] .text {
     .burger.active {
         background: transparent url('../images/sprite-burger.png') right;
     }
-    nav>ul>li>a {
+    nav>ul>li ul {
+        background-color: #ffffff;
+        -webkit-box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.25);
+        -moz-box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.25);
+        box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.25);
+}
+    nav>ul>li>a, nav>ul>li p {
         color: #ffffff;
     }
-    nav>ul>li ul + a:before {
+    nav>ul>li ul li a {
+        color: #000000;
+    }
+    nav>ul>li p:before {
         background: transparent url('../images/sprite-arrows-menu.png') left center;
     }
-    nav>ul>li ul + .active:before {
+    nav>ul>li.active p:before {
         background: transparent url('../images/sprite-arrows-menu.png') -7px center;
     }
-    nav>ul>li>a:after {
+    nav>ul>li>a:after, nav>ul>li p:after {
         background-color: #ffffff;
-    }
-    nav>ul>li>a:hover:after {
-        width: 100%;
     }
     .coating-chooser {
         padding: 50px 0 0 70px;
