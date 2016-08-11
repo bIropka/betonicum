@@ -95,6 +95,22 @@ $(document).ready(function () {
         $('.on-map').removeClass('active');
     });
 
+    $('.years li span').click(function() {
+        var currentIndex = $(this).parent('li').index();
+        $('.years li').removeClass('active');
+        $(this).parent('li').addClass('active');
+        $('.year-info li').removeClass('active');
+        $('.year-info li').eq(currentIndex).addClass('active');
+    });
+
+    $('.tabs-control li').click(function() {
+        var currentIndex = $(this).index();
+        $('.tabs-control li.active').removeClass('active');
+        $(this).addClass('active');
+        $('.tabs li.active').removeClass('active');
+        $('.tabs li').eq(currentIndex).addClass('active');
+    });
+
     /****************
      **** sliders ***
      ****************/
@@ -103,4 +119,12 @@ $(document).ready(function () {
         arrows: false,
         dots: true
     });
+
+    $('.slider-news').slick({
+        prevArrow: '.slider-control-left-news',
+        nextArrow: '.slider-control-right-news',
+        slidesToShow: 3,
+        slidesToScroll: 1
+    });
+
 });
