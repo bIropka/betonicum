@@ -1039,7 +1039,6 @@ nav>ul>li ul li a:hover {
     display: block;
     width: 80%;
     height: 430px;
-    max-width: 870px;
     margin: 0 auto;
 }
 .video p {
@@ -1050,6 +1049,40 @@ nav>ul>li ul li a:hover {
     text-align: center;
     font-size: 13px;
     color: #777777;
+}
+
+
+/************************
+******* non-toxic *******
+************************/
+
+.non-toxic h2 {
+    display: block;
+    width: 50%;
+    font-family: 'Plumb Bold', sans-serif;
+    font-size: 20px;
+    text-align: right;
+    float: right;
+    margin-right: 5%;
+    text-transform: uppercase;
+    margin-top: 60px;
+    position: relative;
+}
+.non-toxic h2:before  {
+    content: '';
+    display: block;
+    width: 20%;
+    min-width: 80px;
+    height: 5px;
+    background-color: #000000;
+    position: absolute;
+    top: -30px;
+    right: 0;
+}
+.non-toxic img {
+    width: 25%;
+    float: right;
+    margin-right: 10%;
 }
 
 
