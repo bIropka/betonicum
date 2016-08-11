@@ -111,9 +111,7 @@ textarea, textarea:hover, textarea:active, textarea:focus {
 .form-field:focus::-moz-placeholder {color: transparent;}
 .form-field:focus:-moz-placeholder {color: transparent;}
 .form-field:focus:-ms-input-placeholder {color: transparent;}
-h1 {
 
-}
 h2 {
     display: inline-block;
     font-family: 'Helvetica Neuecyr Roman', sans-serif;
@@ -1027,6 +1025,9 @@ nav>ul>li ul li a:hover {
 ********* video *********
 ************************/
 
+.video, .advantages {
+    border-bottom: 1px solid #f3f2ef;
+}
 .video h2 {
     display: block;
     width: 80%;
@@ -1056,7 +1057,7 @@ nav>ul>li ul li a:hover {
 ******* non-toxic *******
 ************************/
 
-.non-toxic h2 {
+.non-toxic h2, .decor-props h2 {
     display: block;
     width: 50%;
     font-family: 'Plumb Bold', sans-serif;
@@ -1068,7 +1069,7 @@ nav>ul>li ul li a:hover {
     margin-top: 60px;
     position: relative;
 }
-.non-toxic h2:before  {
+.non-toxic h2:before, .decor-props h2:after  {
     content: '';
     display: block;
     width: 20%;
@@ -1079,12 +1080,133 @@ nav>ul>li ul li a:hover {
     top: -30px;
     right: 0;
 }
-.non-toxic img {
+.non-toxic img, .decor-props img {
     width: 25%;
     float: right;
     margin-right: 10%;
 }
 
+/************************
+**** decor props ********
+************************/
+
+.decor-props h2 {
+    width: 30%;
+}
+.decor-props h2:after  {
+    top: auto;
+    bottom: -30px;
+}
+
+/************************
+****** advantages *******
+************************/
+
+
+.advantages h3 {
+    display: block;
+    width: 220px;
+    margin-left: 10%;
+}
+.advantages h2 {
+    display: inline-block;
+    width: 35%;
+    font-size: 36px;
+    margin-left: 10%;
+}
+.advantages h2:before {
+    content: '';
+    display: block;
+    width: 75%;
+    height: 2px;
+    background-color: #000000;
+    margin: 60px 0 40px;
+}
+.advantages .show-more {
+    float: right;
+    margin-top: 10%;
+    margin-right: 10%;
+}
+.advantages ul {
+    margin-top: 5%;
+}
+.advantages ul li {
+    display: block;
+    width: 33%;
+    float: left;
+    padding-left: 10%;
+    margin: 3% 0;
+}
+.advantages ul li img {
+    width: 30px;
+}
+.advantages ul li h4, .why-we ul li h4 {
+    font-family: 'Plumb Bold', sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+}
+.advantages ul li p, .why-we ul li p {
+    font-size: 13px;
+    color: #515151;
+}
+
+
+/************************
+******** why-we *********
+************************/
+
+.why-we h3 {
+    margin-left: 10%;
+}
+.why-we h2 {
+    display: block;
+    font-family: 'Plumb Regular', sans-serif;
+    font-size: 30px;
+    margin: 5% 0 5% 10%;
+}
+.why-we ul {
+    display: block;
+    width: 90%;
+    margin-left: 10%;
+}
+.why-we ul li {
+    display: block;
+    width: 25%;
+    float: left;
+    padding-right: 5%;
+}
+.why-we ul li img {
+    max-width: 100%;
+}
+
+/************************
+******** quote *********
+************************/
+
+.quote .wrapper {
+    text-align: center;
+    background: url('../images/note-background.jpg');
+    background-size: cover;
+    padding: 10% 25px 7%;
+}
+h1 {
+    display: block;
+    width: 80%;
+    margin: 0 auto 5%;
+    font-size: 30px;
+    font-weight: 100;
+}
+h1 span {
+    font-family: 'Plumb Bold', sans-serif;
+}
+h1:before {
+    content: '';
+    display: block;
+    width: 39px;
+    height: 33px;
+    margin: 0 auto 4%;
+    background: transparent url('../images/image-quotes.png');
+}
 
 /************************
 ********* news **********
